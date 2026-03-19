@@ -37,27 +37,30 @@ export default function ProjectPage() {
       )}
 
       <div className="mt-6 flex items-center justify-between">
-        <h1 className="font-display text-3xl font-semibold">
-          {project.title}
-        </h1>
+        <h1 className="font-display text-3xl font-semibold">{project.title}</h1>
 
         <time className="font-body text-sm text-neutral-500">{date}</time>
       </div>
 
       {project.authors.length > 0 && (
         <div className="font-body mt-3 flex flex-wrap gap-3">
-          {project.authors.map((author) => (
-            <div key={author._id} className="flex items-center gap-2">
-              {author.imageUrl && (
-                <img
-                  src={author.imageUrl}
-                  alt={author.name}
-                  className="h-6 w-6 rounded-full object-cover"
-                />
-              )}
-              <span className="text-sm text-neutral-600">{author.name}</span>
-            </div>
-          ))}
+          {project.authors.map(
+            (author) =>
+              author && (
+                <div key={author._id} className="flex items-center gap-2">
+                  {author.imageUrl && (
+                    <img
+                      src={author.imageUrl}
+                      alt={author.name}
+                      className="h-6 w-6 rounded-full object-cover"
+                    />
+                  )}
+                  <span className="text-sm text-neutral-600">
+                    {author.name}
+                  </span>
+                </div>
+              ),
+          )}
         </div>
       )}
 

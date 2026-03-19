@@ -80,9 +80,7 @@ export default function AdminAuthors() {
               >
                 <div>
                   <p className="text-sm font-medium">{a.name}</p>
-                  {a.bio && (
-                    <p className="text-xs text-neutral-500">{a.bio}</p>
-                  )}
+                  {a.bio && <p className="text-xs text-neutral-500">{a.bio}</p>}
                 </div>
                 <button
                   onClick={() => removeAuthor({ id: a._id })}

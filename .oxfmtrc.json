@@ -3,4 +3,5 @@
   "semi": false,
   "sortImports": { "newlinesBetween": false },
   "sortTailwindcss": {},
+  "ignorePatterns": ["convex/_generated/**"]
 }
