@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Fraunces Variable", serif;
+  --font-body: "Hanken Grotesk Variable", sans-serif;
+}
